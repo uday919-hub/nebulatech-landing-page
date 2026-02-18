@@ -19,7 +19,6 @@ const reviews = [
 const Testimonials = () => {
   return (
     <section className="bg-black py-20 px-6 relative overflow-hidden">
-      {/* Decorative background circle */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
       
       <div className="max-w-4xl mx-auto">

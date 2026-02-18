@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <section className="min-h-screen bg-black text-white py-20 px-10 flex flex-col items-center justify-center">
-      {/* Title with a glow effect */}
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

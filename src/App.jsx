@@ -1,20 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-// Importing all the pieces we built
 import About from "./components/About";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
-import Chatbot from "./components/Chatbot"; // Import the chatbot here!
+import Chatbot from "./components/Chatbot"; 
 
 function App() {
   return (
     <Router>
       <div className="bg-black min-h-screen text-white font-sans selection:bg-cyan-500/30">
-        
-        {/* Navigation Bar */}
         <nav className="p-6 flex justify-between items-center border-b border-white/10 backdrop-blur-md sticky top-0 z-50 bg-black/50">
           <h1 className="text-2xl font-bold tracking-tighter text-cyan-400">
             NEBULA<span className="text-white">TECH</span>
@@ -26,10 +22,8 @@ function App() {
         </nav>
 
         <Routes>
-          {/* HOME PAGE */}
           <Route path="/" element={
             <>
-              {/* 1. Hero */}
               <main className="relative flex flex-col items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-black to-black -z-10"></div>
                 <h2 className="text-6xl md:text-8xl font-black text-center mb-6 tracking-tight">
@@ -42,28 +36,17 @@ function App() {
                   EXPLORE PORTAL
                 </button>
               </main>
-
-              {/* 2. Services */}
               <Services />
-              {/* 3. Portfolio */}
               <Portfolio />
-              {/* 4. Testimonials */}
               <Testimonials />
-              {/* 5. Contact Form */}
               <Contact />
-              
-              {/* Footer */}
               <footer className="py-10 text-center border-t border-white/5 text-gray-600 text-sm font-mono">
                 &copy; 2026 NEBULATECH // ALL RIGHTS RESERVED
               </footer>
             </>
           } />
-          
-          {/* ABOUT PAGE */}
           <Route path="/about" element={<About />} />
         </Routes>
-
-        {/* 6. The Chatbot (Placed here so it shows on every page) */}
         <Chatbot />
 
       </div>
